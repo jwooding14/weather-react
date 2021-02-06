@@ -28,6 +28,8 @@
   #dateCity {
     text-align: center;
     font-family: "Mukta", sans-serif;
+    padding: 0px 0px 20px 50px;
+
   }
   
   #pst {
@@ -49,14 +51,16 @@
 
   }
   
-  .city {
-    font-weight: 700;
+  li.city {
+    font-weight: 600;
     color: black;
     text-transform: capitalize;
     white-space: nowrap;
-    font-size: 40px;
-    text-align: center;
+    font-size: 35px;
+   text-align: center;
     font-family: "Mukta", sans-serif;
+    padding: 0px 50px 0px 0px;
+   
   }
   
   .weather {
@@ -76,13 +80,12 @@
   }
   
   #date {
-    margin: 0;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
     font-family: "Mukta", sans-serif;
     color: black;
     font-weight: bold;
-    padding: 0px 0px 50px 0px;
+    padding: 0px 0px 20px 10px;
   }
   
   .weather-forecast-temperature {
@@ -116,6 +119,7 @@
     font-family: "Mukta", sans-serif;
     font-weight: 600;
     font-size: 25px;
+    padding: 0px 5px 0px 20px;
   }
 
   #endTag {

@@ -5,9 +5,9 @@ import "./Weather.css";
 
 export default function Weather() {
 let weatherData = {
-  city: "  Los Angeles", 
+  city: "Los Angeles", 
   temp: "70°F",
-  date: "  Saturday 2/06/2020 09:58",
+  date: "Saturday 2/06/2020 12:37",
   description: "Cloudy",
   humidity: "70%",
   wind: "4 mph",
@@ -74,7 +74,7 @@ return (
                 <br />
                 <li>
                   Pressure <br />
-                  <span id="pressure">{weatherData.pressure}</span> inHG
+                  <span id="pressure">{weatherData.pressure}</span> 
                 </li>
               </ul>
             </div>
@@ -84,6 +84,7 @@ return (
             <ul>
                 <li class="city">{weatherData.city}</li>
             </ul>
+      
             <ul>
               <li class="weatherIcon">
           <strong>  <img
