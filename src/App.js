@@ -11,9 +11,9 @@ function App() {
       <header className="App-header">
        
         
-        <Weather city="tokyo"/>
+        <Weather />
         <footer>
-        <div id="endTag"> <a href="https://github.com/jwooding14/weather-by-Jacqueline.git" target="_blank"> Open source code</a> Coded by Jacqueline Diaz Wooding</div>
+        <div id="endTag"> <a href="https://github.com/jwooding14/weather-react.git" target="_blank"> Open source code</a> Coded by Jacqueline Diaz Wooding</div>
         </footer>
       </header>
      

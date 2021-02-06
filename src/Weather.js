@@ -60,7 +60,7 @@ return (
 
         <div class="row">
           <div id="dateCity" class="col">
-            <span id="date">{weatherData.date}</span>
+            <span id="date"> {weatherData.date}</span>
           </div>
         </div>
         <div class="row">
@@ -86,10 +86,10 @@ return (
             </ul>
             <ul>
               <li class="weatherIcon">
-              <img
+            <img
               src={weatherData.imageUrl}
               alt={weatherData.description}
-              className="float-left"
+              
             />
               </li>
               <li class="weather"></li>
