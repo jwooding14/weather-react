@@ -118,10 +118,7 @@ return (
           </div>
         </div>
       </div>
-        <div class="row weather-forecast" id="forecast"></div>
-       
-
-        <div id="endTag"> <a href="https://github.com/jwooding14/weather-by-Jacqueline.git" target="_blank">Open source code</a> Coded by Jacqueline Diaz Wooding</div>
+        <div class="row weather-forecast" id="forecast"> </div>
         </div>
 );
 }

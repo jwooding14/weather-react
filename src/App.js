@@ -10,12 +10,13 @@ function App() {
     <div className="App">
       <header className="App-header">
        
-        <h1>
-         Hi!
-        </h1>
+        
         <Weather city="tokyo"/>
-      
+        <footer>
+        <div id="endTag"> <a href="https://github.com/jwooding14/weather-by-Jacqueline.git" target="_blank"> Open source code</a> Coded by Jacqueline Diaz Wooding</div>
+        </footer>
       </header>
+     
     </div>
   );
 }
