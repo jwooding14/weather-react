@@ -82,7 +82,7 @@ return (
 
           <div class="col-12 col-md-4">
             <ul>
-                <li class="city">{weatherData.city}</li>
+                <li class="city">{weatherData.city}     </li>
             </ul>
       
             <ul>
