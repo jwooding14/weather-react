@@ -5,9 +5,9 @@ import "./Weather.css";
 
 export default function Weather() {
 let weatherData = {
-  city: "Shanghai", 
-  temp: "50°F",
-  date: "Saturday 2/06/2020 09:58",
+  city: "Los Angeles", 
+  temp: "70°F",
+  date: "  Saturday 2/06/2020 09:58",
   description: "Cloudy",
   humidity: "70%",
   wind: "4 mph",
@@ -60,7 +60,7 @@ return (
 
         <div class="row">
           <div id="dateCity" class="col">
-            <span id="date">  {weatherData.date}</span>
+            <span id="date">{weatherData.date}</span>
           </div>
         </div>
         <div class="row">
