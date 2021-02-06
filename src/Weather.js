@@ -86,11 +86,11 @@ return (
             </ul>
             <ul>
               <li class="weatherIcon">
-            <img
+          <strong>  <img
               src={weatherData.imageUrl}
               alt={weatherData.description}
               
-            />
+            /></strong>
               </li>
               <li class="weather"></li>
             </ul>
