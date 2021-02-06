@@ -5,7 +5,7 @@ import "./Weather.css";
 
 export default function Weather() {
 let weatherData = {
-  city: "Los Angeles", 
+  city: "  Los Angeles", 
   temp: "70°F",
   date: "  Saturday 2/06/2020 09:58",
   description: "Cloudy",
