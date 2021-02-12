@@ -1,23 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import FormattedDate from "./FormattedDate";
 
 
 export default function Weather() {
-let weatherData = {
-  city: "Los Angeles", 
-  temp: "70°F",
-  date: "Saturday 2/06/2020 12:37",
-  description: "Cloudy",
-  humidity: "70%",
-  wind: "4 mph",
-  feelsLike: "55°F",
-  imageUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
-  pressure: "1028 MB",
+const [weatherData, setWeatherData] = useState({ ready: false });
 
-}; 
-    
+ 
+function handleResponse(response) {
+setWeatherData({
+ready: true,
+temp: response.data.main.temp,
+humidity: response.data.main.humidity,
+description: response.data.weather[0].description,
+date: new Date(response.data.dt * 1000),
+wind: response.data.wind.speed,
+city: response.data.name, 
+imageUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+feelsLike: response.data.main.feels_like,
+pressure: response.data.main.pressure,
+});
+}
+
+if (weatherData.ready) {
 return (
+  <div className="weather">
 <div class="background">
       <div class="container">
         <div class="searchBar">
@@ -60,7 +68,7 @@ return (
 
         <div class="row">
           <div id="dateCity" class="col">
-            <span id="date">{weatherData.date}</span>
+            <span id="date"><FormattedDate date={weatherData.date}/> </span>
           </div>
         </div>
         <div class="row">
@@ -69,12 +77,12 @@ return (
               <ul>
                 <li>
                   Wind<br />
-                  <span id="wind">{weatherData.wind}</span> 
+                  <span id="wind">{weatherData.wind} MPH</span> 
                 </li>
                 <br />
                 <li>
                   Pressure <br />
-                  <span id="pressure">{weatherData.pressure}</span> 
+                  <span id="pressure">{weatherData.pressure} inHG</span> 
                 </li>
               </ul>
             </div>
@@ -82,7 +90,7 @@ return (
 
           <div class="col-12 col-md-4">
             <ul>
-                <li class="city">{weatherData.city}     </li>
+                <li class="city">{weatherData.city}</li>
             </ul>
       
             <ul>
@@ -91,12 +99,13 @@ return (
               src={weatherData.imageUrl}
               alt={weatherData.description}
               
-            /></strong>
+            />
+            </strong>
               </li>
               <li class="weather"></li>
             </ul>
             <ul>
-              <li class="tempNow" id="tempNow">{weatherData.temp}</li>
+              <li class="tempNow" id="tempNow">{Math.round(weatherData.temp)}°F</li>
             </ul>
           </div>
 
@@ -106,12 +115,12 @@ return (
                 <ul>
                   <li>
                     Humidity<br />
-                    <span id="humidity">{weatherData.humidity}</span>
+                    <span id="humidity">{weatherData.humidity}%</span>
                   </li>
                   <br />
                   <li>
                     Feels like<br />
-                    <span id="feelsLike"> {weatherData.feelsLike}</span>
+                    <span id="feelsLike">{Math.round(weatherData.feelsLike)}°F</span>
                   </li>
                 </ul>
               </div>
@@ -121,5 +130,17 @@ return (
       </div>
         <div class="row weather-forecast" id="forecast"> </div>
         </div>
+        </div>
 );
+
+
+} else {
+
+const apiKey = "c2a0308255fedbe7dd192fcd88e7b405";
+let city = "Los Angeles";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+axios.get(apiUrl).then(handleResponse);
+
+return "Loading";
+}
 }

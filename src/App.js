@@ -13,7 +13,7 @@ function App() {
         
         <Weather />
         <footer>
-        <div id="endTag"> <a href="https://github.com/jwooding14/weather-react.git" target="_blank"> Open source code</a> Coded by Jacqueline Diaz Wooding</div>
+        <div id="endTag"> <a href="https://github.com/jwooding14/weather-react.git" target="_blank"> Open source code</a> <span id="codedBy">Coded by Jacqueline Diaz Wooding</span></div>
         </footer>
       </header>
      
