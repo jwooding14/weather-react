@@ -24,7 +24,7 @@ function handleResponse(response) {
 
 setWeatherData({
 ready: true,
-temp: response.data.main.temp,
+temperature: response.data.main.temp,
 humidity: response.data.main.humidity,
 description: response.data.weather[0].description,
 date: new Date(response.data.dt * 1000),
@@ -38,7 +38,7 @@ city: response.data.name,
 
 function search() {
   const apiKey = "c2a0308255fedbe7dd192fcd88e7b405";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleResponse);
 } 
 
@@ -63,13 +63,7 @@ return (
               <button type="search" id="find" class="btn btn-primary mx-1">
                 Search
               </button>
-              <span class="secondaryButton" id="position">
-                <button type="submit" class="btn btn-primary mb">
-                  <span class="current-location-button">
-                    My Location <i class="fas fa-location-arrow"></i
-                  ></span>
-                </button>
-              </span>
+              
             </div>
           </form>
           </div>
