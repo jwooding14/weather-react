@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Information from "./Information";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
-import WeatherForecast from "./WeatherForecast";
 
 
 export default function Weather(props) {
@@ -34,6 +34,8 @@ imageUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.
 feelsLike: response.data.main.feels_like,
 pressure: response.data.main.pressure,
 city: response.data.name,
+icon: response.data.weather[0].icon,
+
 });
 }
 
@@ -68,11 +70,8 @@ return (
             </div>
           </form>
           </div>
-          <Information data={weatherData}/>
+          <Information data={weatherData}/>     
           <WeatherForecast city={weatherData.city}/>
-        
-          <br/>
-          <br/>
         </div>
         </div>
         </div>

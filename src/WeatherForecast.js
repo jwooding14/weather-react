@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import WeatherForecastPreview from "./WeatherForecastPreview";
 import "./WeatherForecast.css";
 import axios from "axios";
 
@@ -16,10 +17,14 @@ function handleForecastResponse(response){
 if (loaded && props.city === forecast.city.name)  {
 
    return (
-      <div className="WeatherForecast row">
-        <img src={`http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`} alt="weather" />
-      </div>
-
+    <div className="WeatherForecast row">
+    <WeatherForecastPreview data={forecast.list[0]} />
+    <WeatherForecastPreview data={forecast.list[1]} />
+    <WeatherForecastPreview data={forecast.list[2]} />
+    <WeatherForecastPreview data={forecast.list[3]} />
+    <WeatherForecastPreview data={forecast.list[4]} />
+    <WeatherForecastPreview data={forecast.list[5]} />
+  </div>
     );
 
 } else {
