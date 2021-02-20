@@ -9,8 +9,6 @@ return (
 
 
 <div className="Information"><div>
-
-
 <div class="row">
 <div id="dateCity" class="col">
   <span id="date"><FormattedDate date={props.data.date}/> </span>
@@ -51,7 +49,7 @@ return (
   </ul>
   <ul>
    
-    <li class="tempNow" id="tempNow"> <WeatherTemperature celsius={props.data.temperature}/></li>
+    <div class="tempNow" id="tempNow"> <WeatherTemperature celsius={props.data.temperature}/></div>
   </ul>
 </div>
 
