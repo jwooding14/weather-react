@@ -71,7 +71,7 @@ return (
           </form>
           </div>
           <Information data={weatherData}/>     
-          <WeatherForecast city={weatherData.city}/>
+        <div>  <WeatherForecast city={weatherData.city}/> </div>
         </div>
         </div>
         </div>
