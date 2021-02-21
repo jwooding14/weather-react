@@ -18,8 +18,8 @@ return `${temperature}°C`;
 
 return (
 <div className="WeatherForecastPreview col">
-{hours()}
-<WeatherIcon code={props.data.weather[0].icon}/>
+{hours()}<br/>
+<WeatherIcon code={props.data.weather[0].icon}/><br/>
 {temperature()}
 </div>
 );
