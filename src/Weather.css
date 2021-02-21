@@ -7,64 +7,52 @@
     border-radius: 3em;
     max-width: 767px;
     background-image: url(https://images.pexels.com/photos/1367180/pexels-photo-1367180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
- 
+ padding: 0px 30px 0px 30px;
 }
 
 .unit {
   font-size: 20px;
-  margin: 0 auto;
-  padding: 0px 0px 0px 0px; 
+  margin: 0px 0px 0px 0px;
   top: -34px;
-
-
+position: relative;
   
 }
-  
 
-  
-  ul {
-    list-style-type: none;
-    text-align: center;
-    margin: 0px auto;
+.weatherIcon {
+  padding: 0px 40px 0px 0px;
 
-  }
-  
+
+}
+
+.WeatherForecastPreview {
+padding: 35px 35px 35px 35px;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+  margin: 0px auto;
+
+}
+
   .searchBar {
-    padding: 30px 5px 5px 30px;
-  }
-  
-  #dateCity {
-    text-align: center;
-    font-family: "Mukta", sans-serif;
-
-  }
-  
-  #pst {
-    font-size: 20px;
-    font-weight: lighter;
-    text-align: center;
-  }
-  
-  #refresh {
-    font-weight: 600;
-    font-size: 15px;
+    padding: 30px 5px 55px 30px;
   }
 
   
   li.city {
-    font-weight: 600;
+    font-weight: 300;
     color: black;
     text-transform: capitalize;
     white-space: nowrap;
     font-size: 35px;
    text-align: center;
     font-family: "Mukta", sans-serif;
-    padding: 0px 0px 0px 0px;
-   margin: 0px 0px 0px -30px;
+    margin: 30px 0px 0px -40px;
+
   }
   
   .weather {
-    padding: 0 auto;
     font-weight: 200;
     font-size: 35px;
     text-transform: capitalize;
@@ -72,10 +60,11 @@
   }
   
   .tempNow {
-    font-size: 50px;
+    font-size: 70px;
     text-align: center;
     font-weight: normal;
     color: black;
+    font-weight: 400;
     
   }
   
@@ -84,43 +73,26 @@
     text-align: center;
     font-family: "Mukta", sans-serif;
     color: black;
-    font-weight: bold;
+    font-weight: 500;
     padding: 0px 0px 0px 0px;
   }
   
   .weather-forecast-temperature {
     font-size: 25px;
     font-family: "Mukta", sans-serif;
+    padding: 30px 30px 30px 30px;
   }
   
-  .forecast-max {
-    text-align: center;
-  }
-  
-  .forecast-min {
-    text-align: center;
-    color: #48484a;
-  }
-  
-  #update {
-    font-size: 15px;
-  }
-  
-  h3 {
-    font-size: 20px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 600;
-  }
   
   .data {
     text-align: center;
     color: black;
     font-family: "Mukta", sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 25px;
-    padding: 0px 0px 0px 0px;
+    padding: 0px 20px 0px 0px;
   }
+
 
   #endTag {
     text-align: center;
@@ -130,7 +102,6 @@
 
   #forecast {
     display: flex;
-    padding: 0px 0px 0px 0px;
   }
   
  

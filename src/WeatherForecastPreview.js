@@ -12,7 +12,7 @@ return `${hours}:00`;
 function temperature(){
 let temperature = Math.round(props.data.main.temp);
 
-return `${temperature}C`;
+return `${temperature}°C`;
 
 }
 

@@ -60,7 +60,7 @@ return (
                 autocomplete="off"
                 class="form-control"
                 id="response"
-                placeholder="🔎  Enter city..."
+                placeholder="City..."
                 autofocus="on"
               />
               <button type="search" id="find" class="btn btn-primary mx-1">
